@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>KyuKards - Home</title>
+  <link href='http://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+ </head>
+ <body>
+  <div id="main_wrapper">
+   <div id="page_container">
+    <ul>
+    <li class="page" id="home_page">
+	 <h1 id="title">KyuKards</h1>
+	 <button id="local">Study</button>
+	</li>
+	
+	<li class="page" id="projects_page">
+	 <div class="two_column existing_project">
+	  <div class="single_column projects">
+	   <h3>Your Projects</h3>
+	   <ul class="content_list" id="local_projects">
+	    <li class="loading">Loading...</li>
+	   </ul>
+	   <button id="edit_project" class="half_button right_half projects_disabled" disabled>Edit</button>
+	   <button id="delete_project" class="half_button projects_disabled" disabled>Delete</button>
+	   <button id="new_project" class="half_button right_half">New Project</button>
+	   <button id="start" class="half_button projects_disabled" disabled>Start</button>
+	  </div>
+	  <div class="single_column projects">
+	   <button class="return_to_home">Go Back</button>
+	  </div>
+	 </div>
+	</li>
+	
+	<li class="page" id="create_page">
+	 <div class="two_column new_project">
+	  <div class="single_column projects local_projects">
+	   <h3>New Project</h3>
+	   <div class="add_box">
+	    <div id="add_title_container">
+		 <input type="text" id="add_title" default="Enter project title" value="Enter project title"/>
+		</div>
+		<ul class="content_list">
+		</ul>
+	   </div>
+	   <button id="add_project" class="full_button">Add Project</button>
+	  </div>
+	  <div class="single_column projects web_projects">
+	   <h3>Add Projects</h3>
+	   <div class="add_box">
+	    <label for="add_question">Enter Question Here</label>
+		<textarea class="projects_disabled" disabled id="add_question"></textarea>
+		<label for="add_answer">Enter Answer Here</label>
+		<textarea class="projects_disabled" disabled id="add_answer"></textarea>
+	   </div>
+	   <button id="add_card" class="full_button projects_disabled" disabled>Add Card</button>
+	   <button class="return_to_home">Go Back</button>
+	  </div>
+	 </div>
+	</li>
+	
+	<li class="page" id="edit_page">
+	 <div class="two_column edit_project">
+	  <div class="single_column projects">
+	   <h3>Project Name</h3>
+	   <div class="edit_box">
+	    <label for="edit_question">Enter Question Here</label>
+		<textarea id="edit_question"></textarea>
+		<label for="edit_answer">Enter Answer Here</label>
+		<textarea id="edit_answer"></textarea>
+	   </div>
+	   <button id="edit_add_card" class="full_button">Add Card</button>
+	  </div>
+	  <div class="single_column projects">
+	   <h3>Existing Cards</h3>
+	   <div class="edit_box">
+	    <ul class="content_list">
+		 <li class="loading">Loading...</li>
+	    </ul>
+	   </div>
+	   <div id="existing_buttons">
+	    <button id="edit_existcard" class="half_button right_half projects_disabled" disabled>Edit</button>
+	    <button id="delete_existcard" class="half_button projects_disabled" disabled>Delete</button>
+	    <button class="return_to_home">Go Back</button>
+	   </div>
+	  </div>
+	 </div>
+	</li>
+	
+	<li class="page" id="config_page">
+	 <div class="two_column config_project">
+	  <div class="single_column projects local_projects">
+	   <h3>Game</h3>
+	   <ul class="content_list">
+	    <li><input type="radio" name="game_type" id="classic_type" onclick="enableButtons('config_page', 'projects_disabled')" value="classic"/><label for="classic_type">Classic</label></li>
+	    <li><input type="radio" name="game_type" id="matching_type" onclick="enableButtons('config_page', 'projects_disabled')" value="matching"/><label for="matching_type">Matching</label></li>
+	    <li><input type="radio" name="game_type" id="choice_type" onclick="enableButtons('config_page', 'projects_disabled')" value="choice"/><label for="choice_type">Multiple Choice</label></li>
+	    <li><input type="radio" name="game_type" id="tile_type" onclick="enableButtons('config_page', 'projects_disabled')" value="tile"/><label for="tile_type">Tile</label></li>
+		<li></li>
+	   </ul>
+	   <button id="game" class="full_button projects_disabled" disabled>Start Game</button>
+	  </div>
+	  <div class="single_column projects web_projects">
+	   <button class="return_to_home">Go Back</button>
+	  </div>
+	 </div>
+	</li>
+	</ul>
+   </div>
+  </div>
+  <script type="text/javascript" src="script.js"></script>
+ </body>
+</html>

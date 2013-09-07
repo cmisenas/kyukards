@@ -1,0 +1,2 @@
+KyuKards is a fun twist to learning with using flash cards. Create flash cards. Then use it in varying study game modes (classic, matching, tile, multiple choice).
+Currently, there is only local functionality available (given you have a server to install and run php). 
